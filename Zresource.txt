@@ -1,0 +1,26 @@
+原文链接：https://my.oschina.net/u/3041656/blog/820023
+
+HTMLTestRunner: http://tungwaiyip.info/software/HTMLTestRunner.html
+
+读取配置文件
+
+设置log输出格式
+
+设置接口
+
+设置数据库MySQL
+
+设置发送邮件
+
+从excel中读取用例
+
+从xml中读取sql语句
+
+编写测试用例
+
+unittest
+
+框架运行的入口 读取caselist.txt
+
+测试报告：HTMLTestRunner
+
