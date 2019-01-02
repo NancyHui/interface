@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<page>
+    <database name="test">
+        <table name="book">
+            <sql author="Harry">
+                SELECT * FROM book WHERE author = %s
+            </sql>
+        </table>
+    </database>
+</page>
