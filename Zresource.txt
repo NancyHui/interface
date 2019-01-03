@@ -1,14 +1,16 @@
 原文链接：https://my.oschina.net/u/3041656/blog/820023
 
-HTMLTestRunner: http://tungwaiyip.info/software/HTMLTestRunner.html
-
 读取配置文件
 
 设置log输出格式
+https://www.cnblogs.com/wenwei-blog/p/7196658.html
+https://www.cnblogs.com/yyds/p/6901864.html
+https://docs.python.org/3/library/logging.html#logging-levels
 
 设置接口
 
 设置数据库MySQL
+pip install pymysql
 
 设置发送邮件
 
@@ -23,4 +25,8 @@ unittest
 框架运行的入口 读取caselist.txt
 
 测试报告：HTMLTestRunner
-
+HTMLTestRunner: http://tungwaiyip.info/software/HTMLTestRunner.html python2.7
+                http://www.cnblogs.com/miniren/p/5301081.html#commentform 修改为python3.x
+报告添加饼图：https://my.oschina.net/u/3041656/blog/1563911
+              https://matplotlib.org/gallery
+              pip install matplotlib
