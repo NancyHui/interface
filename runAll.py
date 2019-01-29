@@ -1,12 +1,22 @@
+# 主要部分
+# 首先我们要从caselist.txt文件中读取需要执行的case名称，然后将他们添加到python自带的unittest测试集中，
+# 最后执行run()函数，执行测试集
 import os
 import unittest
 from common.HTMLTestRunner import HTMLTestRunner
 import readConfig as readConfig
 from common.Log import MyLog as MyLog
+from common.configEmail import Email
 
 
 log = MyLog.get_log()
 logger = log.get_logger()
+
+
+class RunAll:
+    # 根据caselist.txt内容，找到需要执行的test_case
+    def __init__(self):
+        self.email = Email
     def set_case_list(self):
         fb = open(self.caseListFile)
         for value in fb.readlines():
@@ -15,6 +25,7 @@ logger = log.get_logger()
                 self.caseList.append(data.replace("\n", ""))
         fb.close()
 
+    # 将test_case添加到test_suite中
     def set_case_suite(self):
         self.set_case_list()
         test_suite = unittest.TestSuite()
@@ -36,11 +47,16 @@ logger = log.get_logger()
             return None
         return test_suite
 
-    def run(self):
+    # 使用HTMLTestRunner执行test_suite
+    def run(self, result=None):
         try:
             suit = self.set_case_suite()
             if suit is not None:
                 logger.info("********TEST START********")
+
+                # resultPath = os.path.join(proDir, "result")
+                # logPath = os.path.join(resultPath, str(datetime.now().strftime("%Y%m%d%H%M%S")))
+
                 fp = open(resultPath, 'wb')
                 runner = HTMLTestRunner(stream=fp, title='Test Report', description='Test Description')
                 runner.run(suit)
@@ -57,3 +73,9 @@ logger = log.get_logger()
                 logger.info("Doesn't send report email to developer.")
             else:
                 logger.info("Unknow state.")
+
+
+if __name__ == '__main__':
+    run = RunAll()
+    run.run()
+
