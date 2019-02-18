@@ -27,6 +27,7 @@ unittest
 测试报告：HTMLTestRunner
 HTMLTestRunner: http://tungwaiyip.info/software/HTMLTestRunner.html python2.7
                 http://www.cnblogs.com/miniren/p/5301081.html#commentform 修改为python3.x
+                https://blog.csdn.net/huilan_same/article/details/77944829 中文 + echart饼图 + 样式微调
 报告添加饼图：https://my.oschina.net/u/3041656/blog/1563911
               https://matplotlib.org/gallery
               pip install matplotlib
